@@ -1,0 +1,89 @@
+.taskboard-row {
+  margin-top: 30px !important;
+}
+
+.row > div {
+  margin-bottom: 40px;
+}
+
+.row {
+  --bs-gutter-y: 32px;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 40px 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e9eff3;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 20l-4.35-4.35a8 8 0 1 0-1.41 1.41L20 21l1-1zM10 16a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"/></svg>');
+}
+
+.addtask-btn {
+  padding: 10px 20px;
+  background-color: #6d3ae0 !important;
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.addtask-btn:hover {
+  background-color: #5a2cc6;
+}
+
+.icons-group button {
+  margin-right: 10px;
+  color: #6d3ae0;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.dropdown-sortby {
+  width: 180px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e9eff3;
+  color: #333;
+  font-weight: 500;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.task-footer {
+  padding: 10px 0 0;
+}
+
+.dashed-line {
+  border-top: 1px dashed #ccc;
+  margin-top: 12px;
+}
+
+.icon-img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.icon-img:hover {
+  filter: grayscale(0%);
+}
+
+.white-icon {
+  filter: invert(100%);
+}

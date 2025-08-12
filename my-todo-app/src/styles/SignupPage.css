@@ -1,0 +1,14 @@
+.CreateAccount-btn {
+  background-color: #6d3ae0;
+  color: #fff;
+}
+
+.Login-link {
+  text-decoration: none;
+  color: #6d3ae0;
+}
+
+.Signup-card {
+  border-radius: 20px;
+  border: none;
+}

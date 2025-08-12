@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../api";
+import "../styles/LoginPage.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -36,7 +37,7 @@ export default function Login() {
       className="d-flex align-items-center justify-content-center min-vh-100"
       style={{ background: "#f5f7fb" }}
     >
-      <div className="card shadow-sm" style={{ width: 400 }}>
+      <div className="card Login-card shadow-sm" style={{ width: 400 }}>
         <div className="card-body">
           <h3 className="mb-3 text-center">Log in</h3>
           <form onSubmit={handleLogin} className="d-flex flex-column gap-3">
@@ -61,13 +62,15 @@ export default function Login() {
             {error ? (
               <div className="alert alert-danger p-2 m-0">{error}</div>
             ) : null}
-            <button className="btn btn-primary w-100" disabled={loading}>
+            <button className="btn Login-btn  w-100" disabled={loading}>
               {loading ? "Logging in..." : "Log In"}
             </button>
           </form>
           <div className="text-center mt-3">
             <span>No account? </span>
-            <Link to="/signup">Create one</Link>
+            <Link to="/signup" className="createOne-link">
+              Create one
+            </Link>
           </div>
         </div>
       </div>

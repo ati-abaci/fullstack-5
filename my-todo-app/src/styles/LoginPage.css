@@ -1,0 +1,24 @@
+.Login-btn {
+  background-color: #6d3ae0;
+  color: #fff;
+}
+
+.card-body {
+  height: 300px;
+  border: none;
+}
+
+.Login-card {
+  border: none;
+  border-radius: 20px;
+}
+
+.createOne-link {
+  text-decoration: none;
+  color: #6d3ae0;
+}
+
+.form-control {
+  border: none;
+  background-color: #f5f5f5;
+}

@@ -36,7 +36,7 @@ function SideBar({
 
       <div className={`sidebar d-flex flex-column ${isOpen ? "open" : ""}`}>
         <div className="sidebar-title">
-          <h4>Task Manager</h4>
+          <h4>Todo App</h4>
         </div>
 
         <div className="sidebar-body flex-grow-1 d-flex flex-column">
@@ -114,7 +114,8 @@ function SideBar({
 
           <div className="mt-auto pt-2">
             <button
-              className="btn btn-outline-danger w-100"
+              className="btn  w-100 mb-3 "
+              style={{ backgroundColor: "#b02933", color: "#fff" }}
               onClick={openLogout}
             >
               Logout

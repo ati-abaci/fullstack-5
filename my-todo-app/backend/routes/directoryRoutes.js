@@ -3,7 +3,6 @@ const router = express.Router();
 const Directory = require("../models/Directory");
 const Task = require("../models/Task");
 
-// POST
 router.post("/", async (req, res) => {
   try {
     const directory = new Directory(req.body);
@@ -14,13 +13,11 @@ router.post("/", async (req, res) => {
   }
 });
 
-// GET
 router.get("/", async (req, res) => {
-  const directories = await Directory.find();
+  const directories = await Directory.find().sort({ name: 1 });
   res.json(directories);
 });
 
-// PUT
 router.put("/:id", async (req, res) => {
   const updated = await Directory.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
@@ -28,16 +25,22 @@ router.put("/:id", async (req, res) => {
   res.json(updated);
 });
 
-// DELETE
 router.delete("/:id", async (req, res) => {
-  await Task.deleteMany({ dirId: req.params.id });
+  const dir = await Directory.findById(req.params.id);
+  if (!dir) return res.status(404).json({ error: "Directory not found" });
+
+  await Task.deleteMany({ directory: dir.name });
   await Directory.findByIdAndDelete(req.params.id);
   res.json({ message: "Directory and its tasks deleted" });
 });
 
-// GET
-router.get("/:dirId/tasks", async (req, res) => {
-  const tasks = await Task.find({ dirId: req.params.dirId });
+router.get("/:id/tasks", async (req, res) => {
+  const dir = await Directory.findById(req.params.id);
+  if (!dir) return res.status(404).json({ error: "Directory not found" });
+
+  const tasks = await Task.find({ directory: dir.name }).sort({
+    createdAt: -1,
+  });
   res.json(tasks);
 });
 

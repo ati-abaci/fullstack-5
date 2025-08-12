@@ -2,8 +2,12 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: #e9eff2;
 }
 
+.sidebar {
+  background-color: #e9eff2;
+}
 .sidebar-body {
   background-color: #e9eff2;
 }
@@ -12,7 +16,7 @@
   padding: 10px;
   border: none;
   border-radius: 10px;
-  background-color: #6d3ae0;
+  background-color: #6d3ae0 !important;
   color: #fff !important;
 }
 
@@ -30,7 +34,6 @@
 
 .sidebar-link:hover {
   background-color: #ebe9fc !important;
-  border-right: 3px solid #b02933 !important;
   color: #b02933 !important;
 }
 
